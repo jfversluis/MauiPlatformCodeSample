@@ -7,6 +7,8 @@ public partial class MainPage : ContentPage
 	public MainPage()
 	{
 		InitializeComponent();
+
+		orientationLabel.Text = new DeviceOrientationService().GetOrientation().ToString();
 	}
 
 	private void OnCounterClicked(object sender, EventArgs e)
